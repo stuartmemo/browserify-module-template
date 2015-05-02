@@ -1,8 +1,8 @@
-var assert = require('assert'),
+var expect = require('chai').expect,
     myModule = require('../lib/index');
 
 describe('My Tests', function () {
     it('should pass the test', function () {
-        assert.equal(myModule(), 'hello');
+        expect(myModule()).to.equal('hello');
     });
 });
