@@ -23,7 +23,12 @@ gulp.task('testify', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(['lib/**/*.js', 'test/**/*.js'], ['test']);
+    gulp.watch([
+        'index.js',
+        'lib/**/*.js',
+        'test/**/*.js',
+        '!test/bundle/*.js'
+    ], ['test']);
 });
 
 gulp.task('test', function () {
